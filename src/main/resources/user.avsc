@@ -1,0 +1,10 @@
+{
+  "namespace":"com.hello.avro",
+  "type":"record",
+  "name":"user",
+  "fields":[
+    {"name":"name","type":"string"},
+    {"name":"age","type":["int","null"]},
+    {"name":"loc","type":["string","null"]}
+  ]
+}

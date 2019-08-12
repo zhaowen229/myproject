@@ -1,0 +1,18 @@
+如果收到的configure消息的version和ingester nsetap version不匹配将断开网络连接并记录相关的错误日志和计数器。
+对于匹配的configure version,将会把除了configure和alive之外的消息写入dataSource队列。
+如果写入失败将记录相关的计数器并发送性能降低的告警。
+
+If the version and Ingester Nsetap version of the received configure message do not match, 
+the network connection is disconnected and the associated error logs and counters are logged. 
+For matching configure version, messages other than configure and alive will be 
+written to the datasource queue. If the write fails, the associated counters are logged and 
+an alert for performance degradation is sent.
+
+If the configure version does not match with.
+
+For matching configure version, messages other than configure and alive will be written to the datasource queue.
+If the write fails, the associated counters are logged.
+
+处理收到的消息，配置消息版本必须与gnb配置文件保持一致。 除了configure和alive消息之外，其他消息被写入dataSource队列。
+
+https://www.bing.com/search?q=%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91&pc=MOZI&form=MOZLBR
