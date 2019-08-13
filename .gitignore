@@ -6,3 +6,7 @@
 #/.gradle/
 .project
 /.gradle/
+
+.classpath
+.project
+.settings
