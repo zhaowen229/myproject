@@ -12,6 +12,12 @@ plugins {
     id 'java-library'
 }
 
+project.ext {
+    cucumberVersion = '3.0.0'
+    cucumberProVersion = '2.0.4'
+    log4jVersion='2.8.2'
+}
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
@@ -31,9 +37,15 @@ dependencies {
     implementation 'org.apache.kafka:kafka-clients:0.11.0.0'
     
     implementation 'io.confluent:kafka-avro-serializer:2.0.1'
+    implementation 'io.netty:netty-all:4.1.25.Final'
     
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
+    testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
+    testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
+    testCompile 'io.cucumber:pro-plugin:' + cucumberProVersion
+    testCompile 'org.awaitility:awaitility:3.1.0'
 }
 
 // In this section you declare where to find the dependencies of your project

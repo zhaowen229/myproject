@@ -26,8 +26,11 @@ public class DefinedThread implements Runnable{
 		//expect:多个线程针对同一个对象,只能有一个对象获取到锁(其中一个对象得到锁之后，在释放锁之前其他线程永远无法获得锁)
 		//result:the same as expectation
 		/*
-		 * Demo demo = new Demo(); Thread t1 = new Thread(new DefinedThread(demo));
-		 * Thread t2 = new Thread(new DefinedThread(demo)); t1.start(); t2.start();
+		 * Demo demo = new Demo(); 
+		 * Thread t1 = new Thread(new DefinedThread(demo));
+		 * Thread t2 = new Thread(new DefinedThread(demo)); 
+		 * t1.start(); 
+		 * t2.start();
 		 */
 		
 		//Condition2
