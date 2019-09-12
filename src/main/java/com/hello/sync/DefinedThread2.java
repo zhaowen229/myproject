@@ -3,7 +3,6 @@ package com.hello.sync;
 class Demo2 {
 	
 	/**
-	 * 静态的方法加锁,即是类锁
 	 * 
 	 * 下面的两种情况都只能有一个线程针对的对象能得到锁
 	 */
@@ -27,7 +26,7 @@ public class DefinedThread2 implements Runnable{
 	}
 	
 	public static void main(String[] args) {
-		//Condition1
+		//第一种
 		// expect:多个线程针对同一个对象,只能有一个对象获取到锁
 		//result:the same as expectation
 
@@ -37,7 +36,7 @@ public class DefinedThread2 implements Runnable{
 //		t1.start();
 //		t2.start();
 		
-		// Condition2
+		// 第二种
 		// expect:多个线程针对不同的对象,只能有一个对象获取到锁
 		// result:the same as expectation
 
