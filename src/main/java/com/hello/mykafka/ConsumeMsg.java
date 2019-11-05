@@ -21,6 +21,7 @@ public class ConsumeMsg {
 		this.prop = prop;
 	}
 	
+	//反序列化 byte[] --> GenericRecord
 	public static void deSerialize(byte[] buf) {
 		Schema schema = CaptureSchema.getInstance().getSchema();
 
