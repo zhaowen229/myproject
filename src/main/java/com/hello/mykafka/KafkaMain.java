@@ -8,19 +8,14 @@ public class KafkaMain {
 
 	private KafkaMain() {
 		prop.put("bootstrap.servers", "localhost:9092");
-		prop.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
-		prop.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
-		prop.put("schema.registry.url", "user.avsc");
-
+		prop.put("key.serializer", "org.apache.kafka.common.serialization.ByteArraySerializer");
+		prop.put("value.serializer", "org.apache.kafka.common.serialization.ByteArraySerializer");
 	}
 
 	public static void main(String[] args) {
+		new KafkaMain();
 		ProducerMsg producerMsg = new ProducerMsg(prop);
-		producerMsg.KafkaPublishMsg();
-		
-		//消费消息
-		ConsumeMsg consumeMsg = new ConsumeMsg(prop);
-		consumeMsg.KafkaConsumerMsg();
+		producerMsg.sendMsgToKafka();
 	}
 
 	
