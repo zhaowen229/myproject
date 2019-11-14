@@ -27,8 +27,8 @@ public class ProducerMsg {
 		record.put("age",26);
 		record.put("loc", "朝阳");
 		
-		KafkaProducer<String, GenericRecord> producer = new KafkaProducer<String, GenericRecord>(prop);
-		ProducerRecord<String, GenericRecord> producerRecord = new ProducerRecord<String, GenericRecord>("test", record);
+		KafkaProducer<String, GenericRecord> producer = new KafkaProducer<>(prop);
+		ProducerRecord<String, GenericRecord> producerRecord = new ProducerRecord<>("test", record);
 		
 		producer.send(producerRecord, new Callback() {
 			@Override
