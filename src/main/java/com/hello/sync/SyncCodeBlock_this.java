@@ -16,16 +16,17 @@ class BlockDemo_this {
 	 */
 
 	public void demo11() {
+		// 对象锁 this
 		synchronized (this) {
 			while (true) {
-				System.out.println(Thread.currentThread().getName());
+				System.out.println("11:" + Thread.currentThread().getName());
 			}
 		}
 	}
 
 	public void demo22() {
 		synchronized (this) {
-			System.out.println(Thread.currentThread().getName());
+			System.out.println("22:" + Thread.currentThread().getName());
 		}
 	}
 
@@ -40,11 +41,11 @@ public class SyncCodeBlock_this implements Runnable {
 
 	public static void main(String[] args) {
 		BlockDemo_this blockDemo = new BlockDemo_this();
-		BlockDemo_this blockDemo2 = new BlockDemo_this();
 		Thread t1 = new Thread(new SyncCodeBlock_this(blockDemo));
-		Thread t2 = new Thread(new SyncCodeBlock_this(blockDemo2));
+		Thread t2 = new Thread(new SyncCodeBlock_this(blockDemo));
 		t1.start();
 		t2.start();
+
 	}
 
 	@Override
@@ -54,4 +55,3 @@ public class SyncCodeBlock_this implements Runnable {
 	}
 
 }
-
