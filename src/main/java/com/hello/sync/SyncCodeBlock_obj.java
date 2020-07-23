@@ -5,6 +5,7 @@ class BlockDemo_obj {
 	private BlockDemo_obj obj2 = new BlockDemo_obj();
 
 	public void demo11() {
+		// 对象锁
 		synchronized (obj1) {
 			while (true) {
 				System.out.println(Thread.currentThread().getName());
