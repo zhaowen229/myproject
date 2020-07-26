@@ -4,22 +4,24 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Properties;
 
 public class LearnFile {
-	private static final String path = "/zhaochunhui/workspace/a.txt";
+	private static final String path = "/Volumes/DiskOne/dev/learnIO/hello.txt";
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) throws Exception {
 		File file1 = new File(path);
+		System.out.println(file1.exists());
 
-		File file2 = Paths.get("/zhaochunhui/workspace", "a.txt").toFile();
-		File file22 = Paths.get(path).toFile();
+		System.out.println(file1.toPath().getFileName());
 
-		Path path = Paths.get("/zhaochunhui/workspace");
-		File file3 = path.resolve("a.txt").toFile();
+//		File file2 = Paths.get("/Volumes/DiskOne/dev/learnIO", "hello.txt").toFile();
+//
+//		File file22 = Paths.get(path).toFile();
+//
+//		Path path = Paths.get("/Volumes/DiskOne/dev/learnIO");
+//		File file3 = path.resolve("hello.txt").toFile();
 
 	}
 
@@ -41,7 +43,7 @@ public class LearnFile {
 		InputStream inputStream = LearnFile.class.getResourceAsStream("/hello.properties");
 		byte[] buffer = new byte[8];
 		int len;
-		File file = new File("/zhaochunhui/file/file.txt");
+		File file = new File("/Volumes/DiskOne/dev/learnIO/hello.txt");
 		FileOutputStream out = new FileOutputStream(file);
 		while ((len = inputStream.read(buffer)) > 0) {
 			out.write(buffer, 0, len);
