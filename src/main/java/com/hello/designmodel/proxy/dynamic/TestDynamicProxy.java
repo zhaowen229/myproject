@@ -1,4 +1,4 @@
-package com.hello.proxy;
+package com.hello.designmodel.proxy.dynamic;
 
 public class TestDynamicProxy {
 
