@@ -1,4 +1,4 @@
-package com.hello.proxy;
+package com.hello.designmodel.proxy.dynamic;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.hello.singleton;
+package com.hello.designmodel.single;
 
 /**
  * 单例-饿汉式

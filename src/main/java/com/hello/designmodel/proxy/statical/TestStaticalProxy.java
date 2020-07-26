@@ -1,6 +1,6 @@
-package com.hello.proxy.statical;
+package com.hello.designmodel.proxy.statical;
 
-import com.hello.proxy.UserImpl;
+import com.hello.designmodel.proxy.dynamic.UserImpl;
 
 public class TestStaticalProxy {
 
