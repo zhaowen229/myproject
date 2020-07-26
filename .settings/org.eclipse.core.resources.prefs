@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/hello/algorithm/SortAlgorithms.java=UTF-8
+encoding//src/main/java/com/hello/algorithm/linkedlist/MergeSortedList.java=UTF-8
+encoding//src/main/java/com/hello/algorithm/linkedlist/Node.java=UTF-8
+encoding//src/main/java/com/hello/algorithm/string/LearnString.java=UTF-8
+encoding//src/main/java/com/hello/algorithm/twosum/TwoSum.java=UTF-8
 encoding//src/main/java/com/hello/cache/TestGuavaCache.java=UTF-8
 encoding//src/main/java/com/hello/map8/TestMap.java=UTF-8
 encoding//src/main/java/com/hello/sync/DefinedThread.java=UTF-8
@@ -6,4 +11,4 @@ encoding//src/main/java/com/hello/sync/DefinedThread2.java=UTF-8
 encoding//src/main/java/com/hello/sync/SyncCodeBlock_class.java=UTF-8
 encoding//src/main/java/com/hello/sync/SyncCodeBlock_obj.java=UTF-8
 encoding//src/main/java/com/hello/sync/SyncCodeBlock_this.java=UTF-8
-encoding/<project>=ISO-8859-1
+encoding/<project>=UTF-8
