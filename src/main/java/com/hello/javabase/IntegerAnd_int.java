@@ -39,14 +39,14 @@ public class IntegerAnd_int {
 		assertFalse(ii3 == jj3);
 
 		// 4、对于两个非new生成的Integer对象，进行比较时，如果两个变量的值在区间:
-		// -128到127之间，则比较结果为true，如果两个变量的值不在此区间，则比较结果为false
+		// 如果数值在-128到127之间，则比较结果为true，否则，比较结果为false
 		Integer i4 = 100;
 		Integer j4 = 100;
-		assertTrue(i4 == j4); // true
+		assertTrue(i4 == j4);
 
 		Integer i5 = 128;
 		Integer j5 = 128;
-		assertFalse(i5 == j5); // false
+		assertFalse(i5 == j5);
 		// 对于第4条的原因：
 		// java在编译Integer i = 100 ;时，会翻译成为Integer i = Integer.valueOf(100)；，而java
 		// API中对Integer类型的valueOf的定义如下：
