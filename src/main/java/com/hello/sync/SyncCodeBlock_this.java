@@ -16,7 +16,7 @@ class BlockDemo_this {
 	 */
 
 	public void demo11() {
-		// 对象锁 this
+		// 同步代码块中 定义 对象锁 this
 		synchronized (this) {
 			while (true) {
 				System.out.println("11:" + Thread.currentThread().getName());

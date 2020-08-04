@@ -3,7 +3,7 @@ package com.hello.sync;
 class BlockDemo_class {
 
 	public void demo() {
-		// 类锁
+		// 同步代码块 定义 类锁
 		synchronized (BlockDemo_obj.class) {
 			while (true) {
 				System.out.println(Thread.currentThread().getName());
