@@ -25,7 +25,7 @@ public class FutureTaskDemo {
 	}
 
 	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+		ExecutorService executor = Executors.newFixedThreadPool(1);
 
 		FutureTask<Integer> futureTask = new FutureTask<Integer>(new Callable<Integer>() {
 
@@ -50,7 +50,7 @@ public class FutureTaskDemo {
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		}
-
+		executor.shutdown();
 	}
 
 }

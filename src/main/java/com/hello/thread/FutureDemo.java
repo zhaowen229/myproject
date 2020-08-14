@@ -23,7 +23,7 @@ public class FutureDemo implements Callable<Integer> {
 	}
 
 	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+		ExecutorService executor = Executors.newFixedThreadPool(1);
 		// 1.
 		// Future<Integer> future = executor.submit(new FutureDemo());
 		// 2.
@@ -44,6 +44,7 @@ public class FutureDemo implements Callable<Integer> {
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		}
+		executor.shutdown();
 	}
 
 }
