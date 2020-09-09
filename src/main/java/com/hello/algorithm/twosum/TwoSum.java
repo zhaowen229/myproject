@@ -27,7 +27,7 @@ public class TwoSum {
 	}
 
 	/**
-	 * ps:mapNums.get(complement) != i 如果相等的话 就相当于只有一个数 （x 和 y 的下标肯定不相等）
+	 * ps:mapNums.get(complement) != i 保证当数组中有两个相同的数时，能返回正确的下标
 	 * 
 	 * @param nums
 	 * @param target
