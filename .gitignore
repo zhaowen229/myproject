@@ -5,7 +5,11 @@
 *.log
 #/.gradle/
 .project
-#.classpath
-#.settings
+.classpath
+.settings
+
+result.log*
+note
 
 /.gradle/
+/.settings/
