@@ -23,7 +23,7 @@ public class ETLMain {
 		try {
 			otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 			if (otherArgs.length != 2) {
-				System.err.println("Usage: wordcount <in> <out>");
+				System.err.println("Usage: ETL <in> <out>");
 				System.exit(2);
 			}
 
