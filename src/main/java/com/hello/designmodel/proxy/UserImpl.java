@@ -1,4 +1,4 @@
-package com.hello.designmodel.proxy.dynamic;
+package com.hello.designmodel.proxy;
 
 public class UserImpl implements UserManager {
 

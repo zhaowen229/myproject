@@ -2,7 +2,7 @@ package com.hello.designmodel.proxy.statical;
 
 import java.text.SimpleDateFormat;
 
-import com.hello.designmodel.proxy.dynamic.UserManager;
+import com.hello.designmodel.proxy.UserManager;
 
 public class LogStaticalProxy implements UserManager {
 	private UserManager target;
