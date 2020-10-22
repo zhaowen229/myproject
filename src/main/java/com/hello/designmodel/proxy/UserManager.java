@@ -1,4 +1,4 @@
-package com.hello.designmodel.proxy.dynamic;
+package com.hello.designmodel.proxy;
 
 public interface UserManager {
 
