@@ -1,7 +1,5 @@
 package com.hello.thread.lock.threadlocal;
 
-import com.hello.test.MyTest;
-
 public class DBUtil {
 	private static ThreadLocal<MyTest> local = new ThreadLocal<MyTest>();
 
