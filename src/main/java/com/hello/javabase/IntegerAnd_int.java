@@ -37,6 +37,7 @@ public class IntegerAnd_int {
 		Integer ii3 = new Integer(200);
 		Integer jj3 = 200;
 		assertFalse(ii3 == jj3);
+		assertTrue(ii3.equals(jj3));
 
 		// 4、对于两个非new生成的Integer对象，进行比较时，如果两个变量的值在区间:
 		// 如果数值在-128到127之间，则比较结果为true，否则，比较结果为false
@@ -47,6 +48,7 @@ public class IntegerAnd_int {
 		Integer i5 = 128;
 		Integer j5 = 128;
 		assertFalse(i5 == j5);
+		assertTrue(i5.equals(j5));
 		// 对于第4条的原因：
 		// java在编译Integer i = 100 ;时，会翻译成为Integer i = Integer.valueOf(100)；，而java
 		// API中对Integer类型的valueOf的定义如下：
@@ -65,6 +67,14 @@ public class IntegerAnd_int {
 
 		// java对于-128到127之间的数，会进行缓存，Integer i = 127时，会将127进行缓存，下次再写Integer j =
 		// 127时，就会直接从缓存中取，就不会new了
+
+//		Integer类的equals方法源码: 比较两个对象的值
+//		public boolean equals(Object obj) {
+//	        if (obj instanceof Integer) {
+//	            return value == ((Integer)obj).intValue();
+//	        }
+//	        return false;
+//	    }
 	}
 
 }
