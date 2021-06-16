@@ -44,8 +44,8 @@ dependencies {
     implementation 'io.netty:netty-all:4.1.25.Final'
     
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-    
+    implementation 'junit:junit:4.12'
+
     testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
     testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
     testCompile 'io.cucumber:pro-plugin:' + cucumberProVersion
