@@ -24,19 +24,20 @@ public class TestTransient {
             os.flush();
             os.close();
 
-            user = new User("chz2",28);//反序列化之前修改值,发现name = "chz2"
-            ObjectInputStream is = new ObjectInputStream(new FileInputStream("d:/transient.txt"));
-            user = (User) is.readObject();
-            is.close();
+            user = new User("chz2",28);//修改对象名称
 
-            System.out.println(user.toString());
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream("d:/transient.txt"));
+            user = (User) is.readObject();//反序列化 读取用户名称 name=chz2
+            is.close();
+            System.out.println("deserialization:"+user.toString());//反序列化的结果: User{name=chz2, age=0}
+//          age 没有被序列化到二进制字节数组中的，而且userName用static修饰符修饰也不会被序列化到二进制字节数组中,
+//          它取出的只是JVM内存中的值（序列化之前以对象保存的形式是chz 而反序列化之后取出的是chz2 证明字节数组无该值
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
 }
-
 
 class User implements Serializable {
     private static String name;
@@ -46,6 +47,7 @@ class User implements Serializable {
         this.name = name;
         this.age = age;
     }
+
 
     public String getName() {
         return name;
