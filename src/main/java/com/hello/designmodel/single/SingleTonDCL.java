@@ -10,6 +10,10 @@ package com.hello.designmodel.single;
  * 双重检查加锁机制的实现会使用一个关键字volatile，
  * 
  * 目的：1.禁止指令重排 2.保证可见性
+ *
+ * 1.分配内存
+ * 2.调用构造函数初始化对象
+ * 3.返回内存地址的引用
  * 
  * @author czhao1
  *
