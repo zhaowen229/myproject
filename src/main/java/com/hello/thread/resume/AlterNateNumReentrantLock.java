@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class AlterNateNumReentrantLock {
-    private Lock lock = new ReentrantLock();
+    private static Lock lock = new ReentrantLock();
     private Condition odd = lock.newCondition();
     private Condition even = lock.newCondition();
 
@@ -13,24 +13,22 @@ public class AlterNateNumReentrantLock {
         try{
             lock.lock();
             System.out.println(Thread.currentThread().getName()+" "+val);
-            even.notify();
+            even.signal();
             odd.await();
         }catch (InterruptedException e){
-           lock.unlock();
+            lock.unlock();
         }
-
     }
 
     public void printEvenNum(Integer val){
         try{
             lock.lock();
             System.out.println(Thread.currentThread().getName()+" "+val);
-            odd.notify();
+            odd.signal();
             even.await();
         }catch (InterruptedException e){
             lock.unlock();
         }
-
     }
 
     public static void main(String... args) {

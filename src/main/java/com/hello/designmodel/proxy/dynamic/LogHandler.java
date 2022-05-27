@@ -15,7 +15,17 @@ public class LogHandler implements InvocationHandler{
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		System.out.println("execute a output.---------------");
-		return method.invoke(this.targetObject, args);
+		before();
+		Object result =  method.invoke(this.targetObject, args);
+		after();
+		return result;
+	}
+
+	private void before(){
+		System.out.println("jdk dynamic begin.");
+	}
+
+	private void after(){
+		System.out.println("jdk dynamic end.");
 	}
 }
