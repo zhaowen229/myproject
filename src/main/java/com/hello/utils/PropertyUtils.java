@@ -25,4 +25,11 @@ public class PropertyUtils {
 		return prop;
 	}
 
+	public static void main(String[] args) {
+		try (InputStream inputStream = Class.class.getResourceAsStream("/hello.properties")) {
+			new Properties().load(inputStream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
