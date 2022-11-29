@@ -8,6 +8,13 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.hello.utils.PropertyUtils;
 
+/**
+ * 		// expireAfterAccess: 当缓存项在指定的时间段内没有被读或写就会被回收。
+ * 		// expireAfterWrite：当缓存项在指定的时间段内没有更新就会被回收。
+ * 		// refreshAfterWrite：当缓存项上一次更新操作之后的多久会被刷新
+ * 		// cache = CacheBuilder.newBuilder().expireAfterWrite(30,
+ * 		// TimeUnit.SECONDS).build();
+ */
 public class TestGuavaCache {
 
 	private static final Logger logger = LogManager.getLogger(TestGuavaCache.class);
@@ -15,12 +22,6 @@ public class TestGuavaCache {
 	private static final String CACHE_EXPIRE_TIME = "cache.expire.time.setting";
 
 	public TestGuavaCache() {
-		// expireAfterAccess: 当缓存项在指定的时间段内没有被读或写就会被回收。
-		// expireAfterWrite：当缓存项在指定的时间段内没有更新就会被回收。
-		// refreshAfterWrite：当缓存项上一次更新操作之后的多久会被刷新
-		// cache = CacheBuilder.newBuilder().expireAfterWrite(30,
-		// TimeUnit.SECONDS).build();
-
 		cache = CacheBuilder
 				// from("")
 				.from(PropertyUtils.getInstance().getProperties().getProperty(TestGuavaCache.CACHE_EXPIRE_TIME))
@@ -43,7 +44,8 @@ public class TestGuavaCache {
 		System.out.println("before clear cache value ==" + cache.getIfPresent("key"));
 
 		try {
-			Thread.sleep(40000);// expireAfterWrite=30s
+			// expireAfterWrite=30s
+			Thread.sleep(40000);
 		} catch (InterruptedException e) {
 		}
 
