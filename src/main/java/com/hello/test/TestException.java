@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 
 public class TestException {
-
+//test commit
 	private static Logger logger = LogManager.getLogger(TestException.class);
 	private static TestException obj = new TestException();
 	
