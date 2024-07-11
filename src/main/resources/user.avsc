@@ -1,5 +1,5 @@
 {
-  "namespace":"com.hello.avro",
+  "namespace":"com.chz.avro",
   "type":"record",
   "name":"user",
   "fields":[

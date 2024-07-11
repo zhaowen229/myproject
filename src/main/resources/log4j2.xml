@@ -9,10 +9,10 @@
     </File>
   </Appenders>
   <Loggers>
-    <Logger name="com.hello" level="INFO">
+    <Logger name="com.chz" level="INFO">
       <AppenderRef ref="STDOUT" />
     </Logger>
-    <Logger name="com.hello" level="info">
+    <Logger name="com.chz" level="info">
       <AppenderRef ref="ServerDailyRollingFile"/>
     </Logger> 
     <Root level="warn">
