@@ -4,7 +4,7 @@ package com.chz.thread.resume.alternate.print;
  * @author zhaoc
  * 交替打印abc
  */
-public class AlternatePrintWay1 {
+public class AlternatePrintABCWay1 {
     private static Object object = new Object();
     private static int state = 0;
 

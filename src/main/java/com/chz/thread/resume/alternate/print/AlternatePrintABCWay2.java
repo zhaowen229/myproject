@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author zhaoc
  * 交替打印abc
  */
-public class AlternatePrintWay2 {
+public class AlternatePrintABCWay2 {
 
     private static ReentrantLock lock = new ReentrantLock();
     private static Condition condition = lock.newCondition();

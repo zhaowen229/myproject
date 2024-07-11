@@ -7,12 +7,13 @@ import java.text.SimpleDateFormat;
  * 
  * 验证两种方法的运行时间
  * 
- * 1.for (int i = 0; i < 30; i++) { new Thread01().run(); } 结果：60s
+ * 1.for (int i = 0; i < 30; i++) { new ThreadExecuteSpendTime().run(); } 结果：60s
  * 
- * 2.for (int i = 0; i < 30; i++) { new Thread01().start(); } 结果：很快2s
+ * 2.for (int i = 0; i < 30; i++) { new ThreadExecuteSpendTime().start(); } 结果：很快2s
  *
+ * @author zhaoc
  */
-public class Thread01 extends Thread {
+public class ThreadExecuteSpendTime extends Thread {
 
 	@Override
 	public void run() {
@@ -27,7 +28,7 @@ public class Thread01 extends Thread {
 
 	public static void startMethod() {
 		for (int i = 0; i < 30; i++) {
-			new Thread01().start();
+			new ThreadExecuteSpendTime().start();
 		}
 	}
 
@@ -37,7 +38,7 @@ public class Thread01 extends Thread {
 		System.out.println(sdf.format(System.currentTimeMillis()));
 		// 1.
 		for (int i = 0; i < 30; i++) {
-			new Thread01().run();
+			new ThreadExecuteSpendTime().run();
 		}
 		System.out.println(sdf.format(new java.util.Date(System.currentTimeMillis())));
 
